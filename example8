@@ -1,0 +1,17 @@
+public class example8 {
+	 
+	public static double getAverage(int[] arg)
+	    {
+	        int sum = 0;
+	        for(int i = 0; i < arg.length; ++i)
+	            sum = sum + arg[i];
+	        
+	        return (double)sum / arg.length;
+	    }
+	    
+	    public static void main(String[] args)
+	    {   
+	        int[] arr = new int[] { 8, 4, -7, 15, 18 };
+	        System.out.println(example8.getAverage(arr));
+	    }
+	}
