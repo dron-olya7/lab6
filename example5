@@ -1,0 +1,32 @@
+public class example5 {
+	
+	public static int sumSquares(int n)
+	    {
+	        int sum = 0;
+	        for(int i = 1; i <= n; ++i)
+	            sum = sum + i*i;
+	        
+	        return sum;
+	    }
+	    
+	    public static int sumSquaresRecursive(int n)
+	    {
+	        if (n == 1)
+	            return 1;
+	        else
+	            return n*n + sumSquaresRecursive(n - 1);
+	    }
+	    
+	    public static int proverka(int n)
+	    {
+	        return n*(n + 1)*(2*n + 1) / 6;
+	    }
+	    
+	    public static void main(String[] args)
+	    {
+	        System.out.println(example5.sumSquares(10));
+	        System.out.println(example5.sumSquaresRecursive(4));
+	        System.out.println(example5.proverka(7));
+	    }
+	    
+	}
