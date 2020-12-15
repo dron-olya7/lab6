@@ -1,0 +1,25 @@
+public class example10 {
+
+	 public static int[] getMaxMin(int... arg)
+	    {
+	        int max = arg[0], min = arg[0];
+	        for(int i = 1; i < arg.length; ++i)
+	        {
+	            if (arg[i] > max)
+	                max = arg[i];
+	            if (arg[i] < min)
+	                min = arg[i];
+	        }
+	        
+	        return new int[] {max, min};
+	    }
+	    
+	    public static void main(String[] args)
+	    {
+	        int[] arr = new int[] { 8, -17, 0, 6, -2, 10, 1, 5 };
+	        int[] minimax = example10.getMaxMin(arr);
+	        System.out.println(minimax[0]);
+	        System.out.println(minimax[1]);
+	    }
+	    
+	}
