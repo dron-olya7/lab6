@@ -1,0 +1,51 @@
+public class example1 {
+
+	    private char c;
+	    private String text;
+	    
+	    public void setField(char c)
+	    {
+	        this.c = c;
+	    }
+	    
+	    public void setField(String text)
+	    {
+	        this.text = text;
+	    }
+	    
+	    public void setField(char[] carr)
+	    {
+	        if (carr.length == 1)
+	            c = carr[0];
+	        else
+	            text = String.copyValueOf(carr);
+	    }
+	    
+	    public static void main(String[] args)
+	    {
+	        example1 task = new example1();
+	        
+	        task.setField('-');
+	        System.out.println(task.c);
+	        System.out.println(task.text);   
+	        
+	        System.out.println("***********");
+	        
+	        task.setField("This is text field");
+	        System.out.println(task.c);
+	        System.out.println(task.text);     
+	        
+	        System.out.println("***********");
+	        
+	        task.setField(new char[] { '&' });
+	        System.out.println(task.c);
+	        System.out.println(task.text);      
+	        
+	        System.out.println("***********");
+	        
+	        task.setField(new char[] { 'T', 'h', 'i', 's', ' ', 'i', 's' });
+	        System.out.println(task.c);
+	        System.out.println(task.text);     
+
+    }
+}
