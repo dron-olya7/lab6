@@ -1,0 +1,31 @@
+public class example4 {
+	 
+	public static int doubleFactorial(int n)
+	    {
+	        int fact = 1;
+	        for(int i = n; i > 0; i = i - 2)
+	            fact = fact * i;
+	        
+	        return fact;
+	    }
+	    
+	    public static int doubleFactorialRecursive(int n)
+	    {
+	        if (n == 1)
+	            return 1;
+	        else if (n == 2)
+	            return 2;
+	        else
+	            return n * doubleFactorialRecursive(n - 2);
+	    }
+	    
+	    public static void main(String[] args)
+	    {
+	        System.out.println(example4.doubleFactorial(7));
+	        System.out.println(example4.doubleFactorialRecursive(7));
+	        
+	        System.out.println(example4.doubleFactorial(8));
+	        System.out.println(example4.doubleFactorialRecursive(8));
+	    }
+	        
+	}
